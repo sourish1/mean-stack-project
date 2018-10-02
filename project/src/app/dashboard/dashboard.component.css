@@ -1,0 +1,17 @@
+.card-style{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%;
+    flex-wrap: wrap; */
+}
+
+.example-card {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex: 1 1 auto;
+  }
+
+
+  

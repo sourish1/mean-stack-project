@@ -1,0 +1,54 @@
+<mat-toolbar fxLayout="row">
+
+  <div class="child" [routerLink]="['/dashboard']">Job Portal</div>
+
+  <div class="child">
+    <button mat-button [matMenuTriggerFor]="menu0">Menu</button>
+      <mat-menu #menu0="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  
+  <div class="child">
+    <button mat-button [matMenuTriggerFor]="menu1">Menu</button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+
+  <div class="child">
+    <button mat-button [matMenuTriggerFor]="menu2">Menu</button>
+    <mat-menu #menu2="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
+  
+  <div class="child">
+    <mat-form-field class="example-form-field">
+    <input matInput type="text">
+  </mat-form-field>
+  </div>
+
+  <button mat-icon-button>
+      <mat-icon aria-label="user_account" [matMenuTriggerFor]="user_account">account_circle</mat-icon></button>
+      <mat-menu #user_account="matMenu">
+        <div *ngIf="isLoggedIn; else loggedOut"> 
+          <button mat-menu-item (click)="logout()">Logout</button>
+        </div>
+        <ng-template #loggedOut>
+          <button mat-menu-item [routerLink]="['/login']">Login</button>
+          <button mat-menu-item [matMenuTriggerFor]="register">Register</button>
+        </ng-template>
+      </mat-menu>
+      <mat-menu #register="matMenu">
+          <button mat-menu-item [routerLink]="['/student/register']">Student</button>
+          <button mat-menu-item [routerLink]="['/company/register']">Company</button>
+      </mat-menu>
+    
+</mat-toolbar>
+
+
+

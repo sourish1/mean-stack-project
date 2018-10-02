@@ -1,0 +1,16 @@
+<h3 class="error">{{err}}</h3>
+
+<mat-card>
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <input type="email" matInput placeholder="Email" formControlName="email" required>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" (click)="submit()">Submit</button>
+  </form>
+</mat-card>

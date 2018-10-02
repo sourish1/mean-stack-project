@@ -1,0 +1,16 @@
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    width: 40%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.error{
+    display: table;
+    color: red;
+    margin: auto;
+    margin-top: 20px;
+}

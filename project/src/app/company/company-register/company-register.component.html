@@ -1,0 +1,28 @@
+<h3 class="error">{{emailErr}}</h3>
+<mat-card>
+<form [formGroup]="companyRegister">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your Company Name</mat-label>
+    <input matInput placeholder="ABCD" formControlName="username" required>
+  </mat-form-field>
+  <br><br>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your Company Email</mat-label>
+    <input matInput placeholder="xyz@mail.com" formControlName="email" required>
+  </mat-form-field>
+  <br><br>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput placeholder="" formControlName="password" required>
+  </mat-form-field>
+  <br><br>
+
+
+    <input type="hidden" formControlName="typeOfUser">
+
+
+  <button mat-raised-button color="primary" type="submit" (click)="save()">Submit</button>
+</form>
+</mat-card>
